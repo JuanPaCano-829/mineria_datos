@@ -71,6 +71,8 @@ Esto también explica la importancia del *learning rate*: si $\nu = 1$ tomamos c
 
 Esta mecánica es el denominador común de todos los algoritmos de boosting. AdaBoost la implementa a través de pesos sobre los ejemplos; Gradient Boosting la formaliza como descenso por gradiente sobre el espacio de funciones. Ambos, no obstante, comparten el mismo principio: **cada modelo simple aprende del error que dejó el anterior**.
 
+![Diagrama del proceso de boosting: cada subconjunto alimenta a un aprendiz débil, cuyas predicciones falsas pasan al siguiente subset para ser corregidas, hasta producir una predicción global.](imgs/boosting_process.png){#fig-boosting-proceso fig-align="center" width="80%"}
+
 ### Intuición visual: boosting en acción
 
 Veamos el proceso en un problema de regresión 1D. Tenemos datos con una relación no lineal y observamos cómo boosting construye progresivamente una función más y más precisa.
